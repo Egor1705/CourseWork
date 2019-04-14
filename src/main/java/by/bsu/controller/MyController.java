@@ -28,17 +28,32 @@ public class MyController {
 	@Autowired
 	private AirportDao airportDao;
 	
+	
 
-	@RequestMapping(value = "/home")
+	@RequestMapping(value = "/tickets")
 	public ModelAndView listTickets() throws IOException {
 
 		List<Ticket> list = ticketDao.listAllTickets();
 		ModelAndView model = new ModelAndView();
+		
 		model.addObject("list", list);
 		model.setViewName("index");
-
 		return model;	
 	}
+	
+	@RequestMapping(value = "/price")
+	public ModelAndView FixPriceTickets() throws IOException {
+
+		List<Ticket> list = ticketDao.FixPrice();
+		ModelAndView model = new ModelAndView();
+		
+		model.addObject("list", list);
+		model.setViewName("index");
+		return model;	
+	}
+	
+	
+
 	
 	
 	@RequestMapping(value = "/airports")

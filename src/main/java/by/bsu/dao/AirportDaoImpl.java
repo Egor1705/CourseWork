@@ -10,6 +10,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
 import by.bsu.model.Airport;
+import by.bsu.model.Plane;
 
 
 public class AirportDaoImpl implements AirportDao {
@@ -39,5 +40,10 @@ public class AirportDaoImpl implements AirportDao {
 		});	
 		return list;
 	}
+
+
+
+
+
 
 }

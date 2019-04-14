@@ -6,16 +6,19 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
 import by.bsu.model.Plane;
 
+
 public class PlaneDaoImpl implements PlaneDao {
 
 	private JdbcTemplate jdbcTemp;
 	
-	
+//	 @Autowired
+//	 private PlaneRepository planeRepository;
 	
 	public PlaneDaoImpl(DataSource dataSource) {
 		jdbcTemp = new JdbcTemplate(dataSource);
@@ -38,5 +41,14 @@ public class PlaneDaoImpl implements PlaneDao {
 		});	
 		return list;
 	}
+
+
+
+
+//	@Override
+//	public Plane getByName(String name) {
+//		// TODO Auto-generated method stub
+//		return planeRepository.findByName(name);
+//	}
 
 }

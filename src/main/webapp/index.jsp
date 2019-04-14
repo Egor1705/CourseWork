@@ -21,10 +21,13 @@
 			    <td>${status.index + 1}</td>
 				<td>${ticket.how_long}</td>
 				<td>${ticket.price}</td>
-				<td>${ticket.id_class_ticket}</td>
-				
+				<td>${ticket.id_class_ticket}</td>				
 			</tr>
 		</c:forEach>
 	</table>
+	
+	
+	
+	
 </body>
 </html>

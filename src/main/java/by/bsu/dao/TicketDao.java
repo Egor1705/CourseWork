@@ -10,4 +10,6 @@ public interface TicketDao {
 	
 	public List<Ticket> ViewCatalog();
 	
+	public List<Ticket>FixPrice();
+	
 }

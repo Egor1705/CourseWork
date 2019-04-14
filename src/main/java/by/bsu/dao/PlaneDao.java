@@ -8,5 +8,5 @@ public interface PlaneDao {
 
 	public List<Plane> listAllPlanes();
 	
-	
+//	public Plane getByName(String name);
 }
